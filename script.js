@@ -29,7 +29,7 @@ function addTask() {
 }
 
 function deleteTask(taskText) {
-  const taskItem = [...taskList.children].find((item) => item.textContent === taskText);
+  const taskItem = [...taskList.children].find((item) => item.childNodes[0].textContent === taskText);
   if (taskItem) {
     taskList.removeChild(taskItem);
     addedTasks.delete(taskText);
